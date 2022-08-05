@@ -37,6 +37,6 @@ def predict():
   prediction = model_Logestic.predict([[exp1,exp2,exp3,exp4,exp5,exp6,exp7,exp8]])
   prediction = model_Decision.predict([[exp1,exp2,exp3,exp4,exp5,exp6,exp7,exp8]])
   prediction = model_Linear.predict([[exp1,exp2,exp3,exp4,exp5,exp6,exp7,exp8]])
-  return render_template('index.html', prediction_text='Regression Model  has predicted Price for the House : {}'.format(prediction))
+  return render_template('index.html', prediction_text='Placements Predicted : {}'.format(prediction))
 if __name__ == "__main__":
     app.run(debug=True)
