@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning  Linear Regression Deployment</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+      
+<div class="" style="background-color:#8D38C9;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Summer Internship 2022 on Machine learning and Data Science</p></center> 
+</div>
+
+<div class="login">
+<h2 >Prediction Of Placements On the Basis of Given Parameters</h2>
+<h4>Developed by Jitendra Kumawat</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+<div class="form-floating mb-3">
+<div>
+<input type="number" class="form-control" id="exp1" name="exp1" step="any" min="0" max="100" placeholder="Enter 10th Percentage" required="required">
+
+</div>
+<div>
+<input type="number" class="form-control" id="exp2" name="exp2" step="any" min="0" max="100" placeholder="Enter 12th Percentage" required="required">
+
+</div>
+<div>
+<input type="number" class="form-control" id="exp3" name="exp3" step="any" min="0" max="100" placeholder="Enter B.Tech Percentage" required="required">
+</div>
+<div>
+<input type="number" class="form-control" id="exp4" name="exp4" step="any" min="0" max="100" placeholder="Enter 7th semester Percentage" required="required">
+
+</div>
+<div>
+<input type="number" class="form-control" id="exp5" name="exp5" step="any" min="0" max="100" placeholder="Enter 6th semester Percentage" required="required">
+
+</div>
+<div>
+<input type="number" class="form-control" id="exp6" name="exp6" step="any" min="0" max="100" placeholder="Enter 5th semester Percentage" required="required">
+
+</div>
+<div>
+<input type="number" class="form-control" id="exp7" name="exp7" step="any" min="0" max="100" placeholder="Enter Final Performance" required="required">
+
+</div>
+<div>
+<input type="number" class="form-control" id="exp8" name="exp8" step="any" min="1" max="2" placeholder="Enter Medium  1:for English Medium 2.for Hindi Medium" required="required">
+
+</div>
+
+
+</div>
+<br>
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-small">NavieBayes Prediction</button>
+<button type="submit" class="btn btn-primary btn-block btn-small">KNN Prediction</button>
+<button type="submit" class="btn btn-primary btn-block btn-small">Logestic Regression Prediction</button>
+<button type="submit" class="btn btn-primary btn-block btn-small">Decision Tree Prediction</button>
+<button type="submit" class="btn btn-primary btn-block btn-small">SVM Prediction</button>
+<button type="submit" class="btn btn-primary btn-block btn-small">Random Forest Prediction</button>
+<button type="submit" class="btn btn-primary btn-block btn-small">Linear Reggression Prediction</button>
+</form>
+<br>
+<br>
+{{ prediction_text }}
+</div>
+
+<div class="" style="background-color:#DCD0FF;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Experiment Performed in Summer internship 2022 from 27 June to 8 August </p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
